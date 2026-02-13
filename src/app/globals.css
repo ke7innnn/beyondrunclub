@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "AgencyFB";
+  src: url("/videofont/AGENCYB.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #111111;

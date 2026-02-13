@@ -7,7 +7,7 @@
 }
 
 .header {
-    font-family: 'Inter', sans-serif;
+    font-family: "AgencyFB", sans-serif;
     font-size: 24px;
     font-weight: 500;
     margin-bottom: 32px;
@@ -52,7 +52,7 @@
 }
 
 .eventTitle {
-    font-family: 'Inter', sans-serif;
+    font-family: "AgencyFB", sans-serif;
     font-weight: 900;
     font-size: 56px;
     line-height: 0.95;

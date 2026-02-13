@@ -32,6 +32,19 @@
     z-index: 1;
 }
 
+.backgroundMedia::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(5, 61, 42, 0.4);
+    /* Greenish overlay */
+    z-index: 2;
+    pointer-events: none;
+}
+
 .leftHalf {
     width: 50%;
     position: relative;
@@ -82,7 +95,7 @@
 }
 
 .title {
-    font-family: 'Inter', sans-serif;
+    font-family: "AgencyFB", sans-serif;
     /* Fallback to Inter */
     font-weight: 900;
     font-size: 72px;

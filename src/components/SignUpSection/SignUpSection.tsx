@@ -13,22 +13,13 @@ export default function SignUpSection() {
                     />
                 </div>
                 <div className={styles.arrowContainer}>
-                    <svg className={styles.curvedArrow} width="200" height="80" viewBox="0 0 200 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        {/* Thick curved path */}
-                        <path
-                            d="M 15 40 C 50 15, 150 15, 185 40"
-                            stroke="white"
-                            strokeWidth="6"
-                            fill="none"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                        />
-                        {/* Bold arrowhead */}
-                        <path
-                            d="M 185 40 L 172 30 L 177 40 L 172 50 Z"
-                            fill="white"
-                        />
-                    </svg>
+                    <img
+                        src="/arrow/erasebg-transformed.png"
+                        alt="Join Arrow"
+                        className={styles.arrowImage}
+                        width={200}
+                        height={80}
+                    />
                 </div>
                 <a
                     href="https://instagram.com/beyondrunclub"

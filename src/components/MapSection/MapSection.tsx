@@ -21,7 +21,7 @@ export default function MapSection() {
                 </div>
                 <div className={styles.overlay}>
                     <h2 className={styles.text}>
-                        BASED IN VASAI, MAHARASHTRA
+                        BORN IN VASAI
                     </h2>
                 </div>
             </a>

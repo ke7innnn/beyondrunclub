@@ -4,15 +4,7 @@ import Link from "next/link";
 export default function Header() {
     return (
         <header className={styles.header}>
-            {/* Top Bar */}
-            <div className={styles.topBar}>
-                <div className={styles.topBarLeft}>
-                    {/* Placeholder for top left content if needed */}
-                </div>
-                <div className={styles.topBarRight}>
-                    <Link href="#" className={styles.topBarLink}>Start a Run</Link>
-                </div>
-            </div>
+
 
             {/* Main Navigation */}
             <nav className={styles.mainNav}>
@@ -43,10 +35,10 @@ export default function Header() {
 
             {/* Sub Nav */}
             <div className={styles.subNav}>
-                <h2 className={styles.subNavTitle}>CHECK OUT</h2>
+
                 <div className={styles.subNavLinks}>
-                    <Link href="#event" className={styles.subNavLink}>Upcoming Run</Link>
-                    <Link href="#past-events" className={styles.subNavLink}>Past Runs</Link>
+                    <Link href="#event" className={styles.subNavLink}>Upcoming Event</Link>
+                    <Link href="#past-events" className={styles.subNavLink}>Past Events</Link>
                     <Link href="#signup" className={styles.subNavLink}>Contact</Link>
                 </div>
             </div>

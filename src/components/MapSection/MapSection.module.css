@@ -33,7 +33,7 @@
     width: 100%;
     height: 100%;
     border: none;
-    filter: grayscale(100%) contrast(1.2) brightness(0.5) invert(1);
+    filter: grayscale(100%) invert(100%) brightness(50%) contrast(130%);
     transition: filter 0.5s ease;
     pointer-events: none;
 }
@@ -52,33 +52,46 @@
 }
 
 .text {
-    font-family: 'Inter', sans-serif;
-    font-size: 80px;
-    font-weight: 900;
+    font-family: "AgencyFB", sans-serif;
+    font-size: 96px;
+    font-weight: normal;
     line-height: 1;
     text-align: center;
-    color: transparent;
-    -webkit-text-stroke: 2px #fff;
+    color: #fff;
     text-transform: uppercase;
     position: relative;
     z-index: 3;
-    transition: color 0.4s ease, -webkit-text-stroke 0.4s ease;
+    transition: color 0.4s ease;
     cursor: pointer;
     max-width: 90%;
+    letter-spacing: 2px;
+}
+
+.text::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    /* Adjust spacing below text */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #E5D0A1;
+    /* Pale gold/sand color */
 }
 
 /* Hover Effects */
 .mapLink:hover .mapIframe {
-    filter: grayscale(80%) contrast(1.1) brightness(0.7) invert(1);
+    filter: grayscale(0%) contrast(1) brightness(1) invert(0);
 }
 
 .mapLink:hover .overlay {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .mapLink:hover .text {
     color: #fff;
-    -webkit-text-stroke: 0px transparent;
+    /* Remains white */
 }
 
 @media (max-width: 768px) {
@@ -87,7 +100,6 @@
     }
 
     .text {
-        font-size: 40px;
-        -webkit-text-stroke: 1px #fff;
+        font-size: 48px;
     }
 }

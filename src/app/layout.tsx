@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: "BEYOND RUN CLUB",
   description: "Casually crushing your comfort zone",
   icons: {
-    icon: "/logo/490943750_17842214832475138_746859562932600238_n.jpg",
+    icon: "/favicon.ico",
   },
 };
 

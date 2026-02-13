@@ -1,0 +1,36 @@
+.section {
+    padding: 0 48px;
+    margin-bottom: 80px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.scrollContainer {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 20px;
+    /* Hide scrollbar a bit or space for it */
+}
+
+/* Hide scrollbar for clean look */
+.scrollContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollContainer {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}

@@ -1,0 +1,133 @@
+.section {
+    padding: 0;
+    width: 100%;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 24px;
+    padding: 0 48px;
+    /* Keep title aligned with content if needed, or remove if not desired */
+    display: none;
+    /* User said "do this section under the 'welcome runners section vid", likely meaning directly attached. Hiding title for now based on "like original" which often just has images. */
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0;
+    /* Remove gap */
+    width: 100%;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    /* Taller images like original */
+    overflow: hidden;
+    cursor: pointer;
+    grid-column: span 2;
+    /* Default: 3 items per row (6/2=3) */
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    display: block;
+    /* Removes bottom spacing */
+}
+
+.card:hover .image {
+    transform: scale(1.03);
+}
+
+.content {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    z-index: 2;
+    /* Ensure button is visible over image */
+}
+
+.cardTitle {
+    display: none;
+    /* Often on Nike grid, text is on button or hidden, let's keep button only if title is not needed, or style title overlay */
+    /* Actually reference shows "Shop Men's" button. Title is usually not separate. */
+}
+
+.cardButton {
+    background-color: #fff;
+    color: #111;
+    padding: 10px 24px;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.cardButton:hover {
+    background-color: #e5e5e5;
+}
+
+/* Specific layout for 5 items:
+   Row 1: 3 items (span 2)
+   Row 2: 2 items (span 3)
+*/
+
+/* Specific layout for 5 items:
+   Row 1: 3 items (span 2 each)
+   Row 2: 2 items (span 3 each) -> 3+3=6, full width
+*/
+
+.grid>div:nth-child(4),
+.grid>div:nth-child(5) {
+    grid-column: span 3;
+}
+
+/* Ensure mobile layout overrides this */
+@media (max-width: 960px) {
+    .section {
+        padding: 0;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0;
+    }
+
+    .card {
+        grid-column: span 1;
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+
+    /* First 4 images in 2x2 grid */
+    .grid>div:nth-child(1),
+    .grid>div:nth-child(2),
+    .grid>div:nth-child(3),
+    .grid>div:nth-child(4) {
+        grid-column: span 1;
+    }
+
+    /* 5th image spans full width below */
+    .grid>div:nth-child(5) {
+        grid-column: span 2;
+        aspect-ratio: 16 / 9;
+    }
+
+    .image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .title {
+        display: none;
+    }
+}

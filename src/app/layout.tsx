@@ -3,12 +3,16 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
+import DynamicTitle from "@/components/DynamicTitle";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Nike Running Clone",
-  description: "A clone of the Nike Running website",
+  title: "BEYOND RUN CLUB",
+  description: "Casually crushing your comfort zone",
+  icons: {
+    icon: "/logo/490943750_17842214832475138_746859562932600238_n.jpg",
+  },
 };
 
 export default function RootLayout({
@@ -19,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <DynamicTitle />
         <Header />
         {children}
         <Footer />

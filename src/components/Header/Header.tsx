@@ -8,19 +8,29 @@ export default function Header() {
 
             {/* Main Navigation */}
             <nav className={styles.mainNav}>
+                <div className={styles.leftLogo}>
+                    <img
+                        src="/run/newleftlogo.png"
+                        alt="Left Logo"
+                        className={styles.leftLogoImage}
+                        width={75}
+                        height={75}
+                    />
+                </div>
+
                 <div className={styles.logo}>
                     <Link href="/">
                         <img
                             src="/logo/490943750_17842214832475138_746859562932600238_n.jpg"
                             alt="Beyond Run Club Logo"
                             className={styles.logoImage}
-                            width={80}
+                            width={120}
                             height={80}
                         />
                     </Link>
                 </div>
 
-                <div className={styles.navLinks}>
+                <div className={styles.mobileNavLinks}>
                     <Link href="/" className={styles.navLink}>Home</Link>
                     <Link href="#event" className={styles.navLink}>Events</Link>
                     <Link href="#gallery" className={styles.navLink}>Gallery</Link>
@@ -41,7 +51,13 @@ export default function Header() {
                     <Link href="#past-events" className={styles.subNavLink}>Past Events</Link>
                     <Link href="#signup" className={styles.subNavLink}>Contact</Link>
                 </div>
+
+                <div className={styles.desktopNavLinks}>
+                    <Link href="/" className={styles.navLink}>Home</Link>
+                    <Link href="#event" className={styles.navLink}>Events</Link>
+                    <Link href="#gallery" className={styles.navLink}>Gallery</Link>
+                </div>
             </div>
-        </header>
+        </header >
     );
 }

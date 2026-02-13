@@ -14,7 +14,7 @@ export default function Home() {
           type="video"
           src="/bgvid/move.mp4"
           title={`WELCOME,\nRUNNER`}
-          subtitle="Casually crushing your comfort zone"
+          subtitle="Casually crushing your comfort zone!"
         />
       </div>
 
